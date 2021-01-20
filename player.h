@@ -4,7 +4,7 @@
 
 struct Player
 {
-    char name[0];
+    char name[30];
     Card Hand[7]{0};
     int handTotal{0};
     int Bet{0};
