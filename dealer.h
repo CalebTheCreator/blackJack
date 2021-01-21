@@ -4,12 +4,12 @@
 
 struct Dealer
 {
-    Card Hand[7]{0};
-    Card mHoleCard{0};
+    Card Hand[7];
+    Card HoleCard;
     int handTotal{0};
     int Bet{0};
     int BankRoll{100};
-    bool AceHigh{false};
+    bool AceHigh;
     int currentCard{0};
 };
 

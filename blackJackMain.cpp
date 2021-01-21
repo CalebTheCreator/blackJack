@@ -2,6 +2,7 @@
 #include "card.h"
 #include "dealer.h"
 #include "blackJackFunctions.cpp"
+#include <time>
 
 Player p1;
 Card deck[52];
@@ -10,12 +11,14 @@ Dealer d1;
 int main()
 {
     bool won;
-    bool hit = false;
+    bool hit;
     char op;
     char gOp;
     char hOp;
     char betOp;
     int aceVal;
+    srand(time(0));
+    d1.Bet = 1 + (rand() % 100);
     populateDeck(deck);
     shuffleDeck(deck);
     d1.Hand[0] = deck[0];
