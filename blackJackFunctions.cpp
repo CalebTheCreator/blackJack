@@ -60,7 +60,7 @@ void shuffleDeck(Card _cD[52])
     }
 }
 
-Card deal(Card cD[])
+/*Card deal(Card cD[])
 {
     Card temp{0};
     static int topOfDeck = 0;
@@ -79,4 +79,4 @@ void updateHandValue(Card _h[], int& tValue)
     {
         tValue += _h[i].val;
     }
-}
+}*/
