@@ -3,7 +3,7 @@
 #include <ctime>
 #include <iostream>
 
-void populateDeck(Card* c)
+void PopulateDeck(Card* c) //this function creates the deck of cards from the values given below
 {
     int values[13]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
     
@@ -13,14 +13,14 @@ void populateDeck(Card* c)
         for(int name = 0; name < 13; name++)
         {
             
-            if(suit == 0){strcpy( (c+suit+name)->suit, "Diamonds");}
+            if(suit == 0){strcpy( (c+suit+name)->suit, "Diamonds");} //this will give each card a unique name identifier
             else if(suit == 13) {strcpy((c+suit+name)->suit, "Hearts");}
             else if(suit == 26){strcpy((c+suit+name)->suit, "Spades");}
             else if(suit == 39){strcpy((c+suit+name)->suit, "Clubs");}
             
             switch(name)
 			{
-                case 0: {strcpy((c+suit+name)->name, "Ace"); break;}
+                case 0: {strcpy((c+suit+name)->name, "Ace"); break;}//this will assign a suit to each card
                 case 1: {strcpy((c+suit+name)->name, "Two"); break;}
                 case 2: {strcpy((c+suit+name)->name, "Three"); break;}
                 case 3: {strcpy((c+suit+name)->name, "Four"); break;}
@@ -39,7 +39,7 @@ void populateDeck(Card* c)
     }
 }
 
-void displayDeck(Card* _c)
+void DisplayDeck(Card* _c)//this is to show that the deck of cards has been populated
 {
     for(int i = 0; i < 52; i++,_c++)
     {
@@ -47,7 +47,7 @@ void displayDeck(Card* _c)
     }
 }
 
-void shuffleDeck(Card _cD[52])
+void ShuffleDeck(Card _cD[52])//this randomizes the position of the cards in the array, simulating a real life shuffle
 {
     int index{0};
     Card temp{0};
@@ -59,24 +59,3 @@ void shuffleDeck(Card _cD[52])
         _cD[index] = temp;
     }
 }
-
-/*Card deal(Card cD[])
-{
-    Card temp{0};
-    static int topOfDeck = 0;
-    temp = cD[topOfDeck];
-    topOfDeck++;
-    if(topOfDeck > 52)
-    {
-        topOfDeck = 0;
-    }
-    return temp;
-}
-
-void updateHandValue(Card _h[], int& tValue)
-{
-    for(int i = 0; i < 7; i++)
-    {
-        tValue += _h[i].val;
-    }
-}*/

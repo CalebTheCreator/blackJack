@@ -8,8 +8,8 @@ struct Player
     Card Hand[7]{0};
     int handTotal{0};
     int handVal{0};
-    int Bet{0};
-    int BankRoll{100};
+    float Bet;
+    int BankRoll;
     bool AceHigh{false};
     bool hit;
     bool won;

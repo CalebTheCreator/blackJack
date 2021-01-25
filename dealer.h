@@ -13,7 +13,6 @@ struct Dealer
     bool AceHigh;
     bool hit;
     int currentCard{0};
-    bool won;
 };
 
 #endif
